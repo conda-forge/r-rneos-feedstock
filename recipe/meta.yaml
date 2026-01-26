@@ -1,4 +1,4 @@
-{% set version = '0.4-0' %}
+{% set version = "0.4-1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rneos_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rneos/rneos_{{ version }}.tar.gz
-  sha256: bd668e6154419b21e465ba6637507104c5cb11bdf7511fd1e2349a01c1da631d
+  sha256: 2ac777bb4cd2e93d35c02063932b8997ef50497d1484c1f188c44da6dab6f277
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -39,9 +39,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=rneos
   license: GPL-2.0-or-later
-  summary: Within this package the XML-RPC API to NEOS <https://neos-server.org/neos/> is implemented.
-    This enables the user to pass optimization problems to NEOS and retrieve results
-    within R.
+  summary: Within this package the XML-RPC API to NEOS <https://neos-server.org/neos/> is implemented. This enables the user to pass optimization problems to NEOS and retrieve results within R.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
